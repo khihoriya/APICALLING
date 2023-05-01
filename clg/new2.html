@@ -1,0 +1,16 @@
+<html>
+	<head>
+	</head>
+	<body>
+	   	<p id="demo"></p>
+	<script>
+		txt='{"name":"pushpa","age":"10","city":"surat"}';
+		obj=JSON.parse(txt);
+		s="<ul>"
+		s+="<li>"+obj.name;
+		s+="<li>"+obj.age;
+		s+="<li>"+obj.city;
+	document.getElementById("demo").innerHTML=s;
+	</script>
+</body>
+</html>

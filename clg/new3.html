@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<style>
+		table,tr,td{
+			border: 2px solid black;
+			font-size: 20px;
+			padding: 10px;			
+}
+		</style>
+	</head>
+	<body>
+	   	<p id="demo"></p>
+	<script>
+			txt='[{"name":"pushpa","age":10,"city":"surat"},'+
+		      	'{"name":"jeel","age":17,"city":"botad"},'+
+		       	'{"name":"neel","age":19,"city":"amdbad"}]';
+		     	
+		obj=JSON.parse(txt);
+		s="<table>";
+		for(i=0;i<obj.length;i++)
+{
+		s+="<tr>";
+		s+="<td>"+obj[i].name;
+		s+="<td>"+obj[i].age;
+		s+="<td>"+obj[i].city;
+		s+="</tr>";
+
+}
+	s+="</table>";
+	document.getElementById("demo").innerHTML=s;
+	</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<p id ="demo"></p>
+	<script>
+		txt = '["pushpa","mahesh","raj","vijay"]';
+		obj =  JSON.parse(txt);
+		s= "<ul>";
+		for(i=0;i<obj.length;i++)
+		{
+			s += "<li>" + obj[i];
+			
+		}
+		s += "</ul>"
+		document.getElementById("demo").innerHTML= s ;
+	</script>
+	
+	</body>
+</html>

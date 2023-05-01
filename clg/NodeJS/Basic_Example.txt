@@ -1,0 +1,76 @@
+q1 : To display 'Hello World'
+-----------------------------------------------------------
+var http=require('http');
+http.createServer(function(req,res){
+   res.write('Hello\n');
+   res.end('World');
+}).listen(8080);
+
+
+http://localhost:8080
+
+-----------------------------------------------------------
+q2
+-----------------------------------------------------------
+var http=require('http');
+var fs=require('fs');
+http.createServer(function(req,res){
+   fs.readFile('f1.html',function(err,data){
+     if(err)
+        throw err;
+     res.write(data);
+     res.end();
+   });
+}).listen(8080);
+-----------------------------------------------------------
+q3
+-----------------------------------------------------------
+var fs=require('fs');
+   fs.appendFile('f1.html','Good Morning',function(err){
+     if(err)
+        throw err;
+     console.log('Saved');
+   });
+-----------------------------------------------------------
+q4   To create file and write data into file
+-----------------------------------------------------------
+var fs=require('fs');
+fs.open('f1.txt','w',function(err,file){
+    if(err)
+         throw err;
+    console.log('File is created\n');
+});
+   fs.writeFile('f1.txt','Good Morning',function(err){
+     if(err)
+        throw err;
+     console.log('Saved');
+   });
+-----------------------------------------------------------
+q5
+-----------------------------------------------------------
+var fs=require('fs');
+fs.unlink('f1.txt',function(err){
+    if(err)
+         throw err;
+    console.log('File is Deleted');
+});
+-----------------------------------------------------------
+q6
+-----------------------------------------------------------
+var fs=require('fs');
+fs.rename('f1.html','f1.txt',function(err){
+    if(err)
+         throw err;
+    console.log('File is Renamed');
+});
+-----------------------------------------------------------
+q7
+-----------------------------------------------------------
+let name=process.argv[2];
+console.log('Hello',name);
+-----------------------------------------------------------
+q8
+-----------------------------------------------------------
+let n=parseInt(process.argv[2]);
+for(i=1;i<=n;i++)
+console.log(i);

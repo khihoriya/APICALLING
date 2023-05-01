@@ -1,0 +1,27 @@
+[
+{
+  "pid":101,
+  "Pname":"Pen",
+   "rate":10
+},
+{
+  "pid":102,
+   "Pname":"Pencil",
+    "rate":20
+},
+{
+  "pid":103,
+  "Pname":"eraser",
+   "rate":5
+},
+{
+  "pid":104,
+  "Pname":"sharpnar",
+   "rate":10
+},
+{
+    "pid":105,
+    "Pname":"bislery",
+     "rate":20
+}
+]

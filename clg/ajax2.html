@@ -1,0 +1,23 @@
+<html>
+<body>
+
+<div id="demo">
+<button type="button" onclick="loadDoc()">Display</button>
+</div>
+
+<script>
+function loadDoc() {
+   var xhr = new XMLHttpRequest();
+   xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) 
+    {
+      document.getElementById("demo").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open("GET", "ajax_info.txt", true);
+  xhr.send();
+}
+</script>
+
+</body>
+</html>

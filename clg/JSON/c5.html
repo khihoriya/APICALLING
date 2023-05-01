@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+	<p id="p1"></p>
+	<script>
+	
+
+	txt = '[{"name" : "Raj" ,"age" : 10 , "City" : "Surat"},{"name" : "Manish" ,"age" : 14 , "City" : "Bharuch"},{"name" : "Karan" ,"age" : 17 , "City" : "Navsari"}]';
+	obj = JSON.parse(txt);
+        s="<table border=1 width=50% height=200>"; 
+        s += "<tr> <td>" +obj[0].name + "<td> " + obj[0].age + "<td> " + obj[0].City ;
+        s += "<tr> <td>" +obj[1].name + "<td> " + obj[1].age + "<td> " + obj[1].City ;
+        s += "<tr> <td>" +obj[2].name + "<td> " + obj[2].age + "<td> " + obj[2].City ;
+        s +="</table>";
+	document.getElementById("p1").innerHTML=s;
+	</script>
+</body>
+</html>

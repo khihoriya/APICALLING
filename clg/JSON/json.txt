@@ -1,0 +1,33 @@
+1)
+<html>
+<body>
+<p id="x"></p>
+<script>
+json_str='{"name":"Raj","city":"Surat","age":20}'
+js_obj=JSON.parse(json_str);
+name=js_obj.name;
+city=js_obj.city;
+age=js_obj.age;
+s="";
+s+="Name : "+name+"<br>";
+s+="City : "+city +"<br>";;
+s+="Age : "+age;
+document.getElementById("x").innerHTML=s;
+
+</script>
+</body>
+</html>
+
+2)
+<html>
+<body>
+<p id="x"></p>
+<script>
+js_obj={name:"Raj",city:"Surat",age:20};
+json_str=JSON.stringify(js_obj);
+document.getElementById("x").innerHTML=json_str;
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<p id ="demo"></p>
+	<script>
+		txt = '[{"name":"raj", "age":10,"city":"surat","phone":[111,222]},' + 
+			'{"name":"mahesh","age":20,"city":"vapi","phone":[333,444]},' +
+			'{"name":"ramesh","age":29,"city":"navsari","phone":[555,666,777]}]';
+		obj =  JSON.parse(txt);
+		s = "<ul>";
+		for(i=0;i<obj.length;i++)
+		{
+			s += "<h1>Student" + (i+1) + "</h1>";
+			s += "<li>" + obj[i].name;
+			s += "<li>" + obj[i].city;
+			s += "<li>" + obj[i].age;
+			s += "<ul>";
+			for(j=0;j<obj[i].phone.length;j++)
+			{
+				s += "<li>" + obj[i].phone[j];
+			}
+			s += "</ul>";
+			s += "<p>";
+		}	
+		s += "</ul>";
+		document.getElementById("demo").innerHTML= s ;
+	</script>
+	
+	</body>
+</html>

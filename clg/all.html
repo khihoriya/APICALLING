@@ -1,0 +1,5 @@
+var http=require('http');
+http.createServer(function(red,res){
+	res.write('Hellow\n');
+	res.end('world');
+}).listen(8080);
